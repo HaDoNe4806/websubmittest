@@ -31,27 +31,40 @@ export default function Home() {
         </div>
 
         <h1>SUBMIT FLAG</h1>
-        <input
-          type="text"
-          placeholder="format flag FCCS{...}"
-          value={flag}
-          onChange={(e) => setFlag(e.target.value)}
-        />
-        <button
-          onClick={checkFlag}
-          style={{ marginLeft: "0", background: "blue", color: "white" }}
+        <div
+          style={{
+            border: "2px solid white",
+            padding: "10px",
+            display: "inline-block",
+            marginBottom: "10px",
+          }}
         >
-          Submit
-        </button>
-        <p style={{ marginTop: "10px", fontSize: "20px" }}>{message}</p>
+          <p>
+            Ừ thì đã có, nhưng có như không mà thôi" Hiền Hồ đang nhắc đến kĩ
+            thuật giấu tin Ste** phải không ??? 🔐 .-.
+          </p>
+          <input
+            type="text"
+            placeholder="format flag FCCS{...}"
+            value={flag}
+            onChange={(e) => setFlag(e.target.value)}
+          />
+          <button
+            onClick={checkFlag}
+            style={{ marginLeft: "0", background: "blue", color: "white" }}
+          >
+            Submit
+          </button>
+          <p style={{ marginTop: "10px", fontSize: "20px" }}>{message}</p>
 
-        {/* Hiển thị ảnh kết quả */}
-        {imageUrl && <img src={imageUrl} alt="Result" width="200" />}
+          {/* Hiển thị ảnh kết quả */}
+          {imageUrl && <img src={imageUrl} alt="Result" width="200" />}
 
-        <div style={{ marginTop: "0" }}>
-          <a href="/FCCS_MISC.png" download>
-            Download
-          </a>
+          <div style={{ marginTop: "0" }}>
+            <a href="/FCCS_MISC.png" download>
+              Download
+            </a>
+          </div>
         </div>
       </div>
     </div>
